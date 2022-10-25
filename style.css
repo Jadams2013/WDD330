@@ -1,9 +1,209 @@
-body {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+/*
+    James Adams
+    WDD330
+    updated 22 October 2022
+*/
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-  background-color: antiquewhite;
-  padding: 1em;
+html {
+    background-color: #161A1D;
 }
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+    color: white; 
+}
+
+.sticky {
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 0em;
+}
+
+
+header {
+    background-color: #660708;
+    padding: 1vw;
+    padding-left: 5vw;
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    padding: 1vw;
+    padding-left: 5vw;
+    background-color: #a4161a;
+    text-align: center;
+}
+
+
+
+/* Column container */
+.flexbox {  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.flexbox > * {
+    padding: 1em;
+    flex: 0 0 25vw;
+}
+
+/* left column */
+.left, .aside {
+    order: -1;
+}
+
+/* Main column */
+.main {
+    flex: 1;
+}
+
+/* swap between mobile and desktop */
+@media screen and (max-width: 700px) {
+    .flexbox, .navbar {   
+        flex-direction: column;
+    }
+}
+
+
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    background-color: #343a40;
+}
+/* links */
+.navbar > * {
+    display: inline-block;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    text-align: center;
+    padding: 1vw 3vw;
+    color: white;
+}
+/*hovered links*/
+.navbar > *:hover {
+    background-color: #a4161a;
+}
+
+.error {
+    color: indianred;
+    text-align: right;
+}
+
+
+/* Images */
+img {
+    width: 100%;
+    padding: 2vw;
+}
+
+.icon {    
+    float: left;
+    max-width: 25%;
+    height: auto;
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+}
+
+input[type=text], input[type=email],input[type=tel] {
+  width: 90%; /*TODO figure out why taskList.css isn't overwriting this like it should*/
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #343a40;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  background-color: #161A1D;
+  color: white;
+  
+}
+::placeholder {
+    color: #343a40;
+    opacity: 1; /* Firefox */
+}
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus {
+  border: 3px solid white;
+  background-color: #161A1D;
+  color: white;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #343a40;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #a4161a;
+}
+
+input[type=radio], input[type=checkbox] {
+    width:24px;
+    height:24px;
+    position:relative;
+    padding:0;
+    vertical-align:middle;
+    
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #343a40;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: #161A1D;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #343a40;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: #161A1D;
+    color: white;
+  }
+  
+  td, th {
+    border: 3px solid #343a40;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #a4161a;
+  }
+
+/*
+colors:
+#161A1D background
+#ffffff text
+#343a40 breakout section
+#660708 header
+#a4161a footer
+#ba181b menu
+#e5383b menu highlight
+*/

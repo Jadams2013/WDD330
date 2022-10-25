@@ -1,0 +1,34 @@
+/*
+	ToDo.css
+	
+*/
+
+ul {
+	list-style: none;
+}
+
+input[type=text] {
+	width: 80%;
+	color: red;
+}
+
+.check {
+	width: 0.8em;
+	height: 0.8em;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: white;
+	border: 4px solid white;
+	-webkit-appearance: none;
+}
+
+.check:checked {
+	background-color: #a4161a;
+}
+
+.completed {
+	color: #343a40;
+	text-decoration: line-through;
+}
+
+
