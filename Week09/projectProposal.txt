@@ -3,6 +3,7 @@ Project Proposal:
 	base goal is to read gamepads, keyboards and mice, 
 	stretch to also read audio inputs, and touchscreens
 	similar functionality to https://gamepad-tester.com/ and https://keyboard-test.space/ in one page 
+	Proposed By James Adams
 
 Purpose:
 	To provide users a single location to test all input peripherals
