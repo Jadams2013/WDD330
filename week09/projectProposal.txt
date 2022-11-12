@@ -1,0 +1,33 @@
+Project Proposal:
+	HID input tester
+	base goal is to read gamepads, keyboards and mice, 
+	stretch to also read audio inputs, and touchscreens
+	similar functionality to https://gamepad-tester.com/ and https://keyboard-test.space/ in one page 
+	Proposed By James Adams
+
+Purpose:
+	To provide users a single location to test all input peripherals
+
+Audience:
+	users looking to test various input devices
+
+Data sources:
+	any temp data will go to localStorage
+	an option to download/upload input history to/from a local JSON file
+
+Colors/Typography/specific Element styling:
+	Current Layout plan:
+		header and drop down/hover menu for settings
+		a text area to record the various inputs 
+		different input devices will appear and disapear down the page 
+	Colors:
+		plain dark background with white text and outline icons 
+		stretch requirement: a setting to change to light mode
+		page will use accent colors, but should still work in greyscale
+
+Schedule:
+	Week 10: Research, Program flow, and full wireframe
+	Week 11: HTML, CSS, and initial JS code
+	Week 12: Page should have all icons/graphics and should recognize input devices
+	Week 13: Page should recognize button presses and should download/upload input history
+	Week 14: polishing, documentation, and any final cleanup 
