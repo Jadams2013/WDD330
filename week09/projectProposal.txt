@@ -31,3 +31,8 @@ Schedule:
 	Week 12: Page should have all icons/graphics and should recognize input devices
 	Week 13: Page should recognize button presses and should download/upload input history
 	Week 14: polishing, documentation, and any final cleanup 
+
+
+
+Things I have learned:
+	CSS is a pain
