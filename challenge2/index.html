@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" ></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+    <meta name="description" content="A site for testing input devices like mice, keybaords, and gamepads" ></meta>
+	<title>Input Tester</title>
+	<link rel="stylesheet" href="style.css" ></meta>
+</head>
+<body>
+	<div class="sticky">
+		<header class="sticky"><a id="top"></a>
+			<h1>Input Tester</h1>
+		</header>
+		<div class="navbar">
+			<div class="dropdown">
+				<a class="dropbtn">☰</a>
+			    <div class="dropdown-content">
+					<a href="../index.html">Portfolio Home</a>
+					<a>Reset page</a>
+					<div>
+						<input type="checkbox" id="mode" name="mode" value="Dark">
+						<label for="mode"> Swap to Light mode</label>
+					</div>
+					<a>Download JSON</a>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div>
+			<p>Last input: <span id="display"></span></p><hr>
+		</div>
+	<div class="keyboard">
+		<div class="mainKeys">
+			<div class="keyRow">
+				<div data-key="Escape" class="key">Esc</div>
+				<div data-key="F1" class="key override">F1</div>
+				<div data-key="F2" class="key override">F2</div>
+				<div data-key="F3" class="key override">F3</div>
+				<div data-key="F4" class="key override">F4</div>
+				<div data-key="F5" class="key override">F5</div>
+				<div data-key="F6" class="key override">F6</div>
+				<div data-key="F7" class="key override">F7</div>
+				<div data-key="F8" class="key override">F8</div>
+				<div data-key="F9" class="key override">F9</div>
+				<div data-key="F10" class="key override">F10</div>
+				<div data-key="F11" class="key override">F11</div>
+				<div data-key="F12" class="key override">F12</div>
+			</div>
+			<br>
+			<div class="keyRow">
+				<div data-key="Backquote" class="key">~</div>
+				<div data-key="Digit1" class="key">1</div>
+				<div data-key="Digit2" class="key">2</div>
+				<div data-key="Digit3" class="key">3</div>
+				<div data-key="Digit4" class="key">4</div>
+				<div data-key="Digit5" class="key">5</div>
+				<div data-key="Digit6" class="key">6</div>
+				<div data-key="Digit7" class="key">7</div>
+				<div data-key="Digit8" class="key">8</div>
+				<div data-key="Digit9" class="key">9</div>
+				<div data-key="Digit0" class="key">0</div>
+				<div data-key="Minus" class="key">-</div>
+				<div data-key="Equal" class="key">+</div>
+				<div data-key="Backspace" class="key">Backspace</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="Tab" class="key override">Tab</div>
+				<div data-key="KeyQ" class="key">Q</div>
+				<div data-key="KeyW" class="key">W</div>
+				<div data-key="KeyE" class="key">E</div>
+				<div data-key="KeyR" class="key">R</div>
+				<div data-key="KeyT" class="key">T</div>
+				<div data-key="KeyY" class="key">Y</div>
+				<div data-key="KeyU" class="key">U</div>
+				<div data-key="KeyI" class="key">I</div>
+				<div data-key="KeyO" class="key">O</div>
+				<div data-key="KeyP" class="key">P</div>
+				<div data-key="BracketLeft" class="key">{</div>
+				<div data-key="BracketRight" class="key">}</div>
+				<div data-key="Backslash" class="key">\</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="CapsLock" class="medium key">Caps</div>
+				<div data-key="KeyA" class="key">A</div>
+				<div data-key="KeyS" class="key">S</div>
+				<div data-key="KeyD" class="key">D</div>
+				<div data-key="KeyF" class="key">F</div>
+				<div data-key="KeyG" class="key">G</div>
+				<div data-key="KeyH" class="key">H</div>
+				<div data-key="KeyJ" class="key">J</div>
+				<div data-key="KeyK" class="key">K</div>
+				<div data-key="KeyL" class="key">L</div>
+				<div data-key="Semicolon" class="key">;</div>
+				<div data-key="Quote" class="key override">'</div>
+				<div data-key="Enter" class="bigger key">Enter</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="ShiftLeft" class="bigger key">Shift</div>
+				<div data-key="KeyZ" class="key">Z</div>
+				<div data-key="KeyX" class="key">X</div>
+				<div data-key="KeyC" class="key">C</div>
+				<div data-key="KeyV" class="key">V</div>
+				<div data-key="KeyB" class="key">B</div>
+				<div data-key="KeyN" class="key">N</div>
+				<div data-key="KeyM" class="key">M</div>
+				<div data-key="Comma" class="key">,</div>
+				<div data-key="Period" class="key">.</div>
+				<div data-key="Slash" class="key override">/</div>
+				<div data-key="ShiftRight" class="bigger key">Shift</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="ControlLeft" class="medium key">Ctrl</div>
+				<div data-key="OSLeft" class="medium key">Win</div>
+				<div data-key="AltLeft" class="medium key override">Alt</div>
+				<div data-key="Space" class="key override" id="Space">Spacebar</div>
+				<div data-key="AltRight" class="medium key override">Alt</div>
+				<div data-key="ContextMenu" class="medium key override">Sel</div>
+				<div data-key="ControlRight" class="medium key">Ctrl</div> 
+			</div><br>
+		</div>
+		<div class="navKeys">
+			<div class="keyRow">
+				<div data-key="0" class="key override">Print</div> <!--Issue here-->
+				<div data-key="ScrollLock" class="key">Scroll</div>
+				<div data-key="Pause" class="key override">Pause</div>
+			</div><br>
+			<div class="keyRow">
+				<div data-key="Insert" class="key">Insert</div>
+				<div data-key="Home" class="key override">Home</div>
+				<div data-key="PageUp" class="key override">Pg Up</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="Delete" class="key">Delete</div>
+				<div data-key="End" class="key override">End</div>
+				<div data-key="PageDown" class="key override">Pg Dwn</div>
+			</div><br>
+			<div class="keyRow">
+				<div data-key="ArrowUp" class="key override">↑</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="ArrowLeft" class="key">←</div>
+				<div data-key="ArrowDown" class="key override">↓</div>
+				<div data-key="ArrowRight" class="key">→</div>
+			</div>
+		</div><br>
+		<div class="numpad" ><br><br> <!--this is where the numpad will be hidden/shown-->
+			<div class="keyRow">
+				<div data-key="NumLock" class="key">Num</div>
+				<div data-key="NumpadDivide" class="key override">/</div>
+				<div data-key="NumpadMultiply" class="key">*</div>
+				<div data-key="NumpadSubtract" class="key">-</div> 
+			</div>
+			<div class="keyRow">
+				<div data-key="Numpad7" class="key override">7</div>
+				<div data-key="Numpad8" class="key override">8</div>
+				<div data-key="Numpad9" class="key override">9</div>
+				<div data-key="NumpadAdd" class="key">+</div> 
+			</div>
+			<div class="keyRow">
+				<div data-key="Numpad4" class="key override">4</div>
+				<div data-key="Numpad5" class="key override">5</div>
+				<div data-key="Numpad6" class="key override">6</div>
+			</div>
+			<div class="keyRow">
+				<div data-key="Numpad1" class="key override">1</div>
+				<div data-key="Numpad2" class="key override">2</div>
+				<div data-key="Numpad3" class="key override">3</div>
+				<div data-key="NumpadEnter" class="key">Enter</div> <!--Issue here-->
+			</div>
+			<div class="keyRow">
+				<div data-key="Numpad0" class="bigger key">0</div>
+				<div data-key="NumpadDecimal" class="key">.</div>
+			</div>
+			
+		</div>
+	</div>
+	<hr>
+	<div class="keyboard">
+		<div class="keyRow">
+			<div class="key">left Click</div>
+			<div class="key">Right Click</div>
+		</div>
+		<div class="keyRow">
+			<div class="key">Scroll Up</div>
+			<div class="key">Scroll Down</div>
+			<!-- stuff goes here -->
+		</div>
+		<div class="keyRow">
+			<div class="key">Forward</div>
+			<div class="key">Back</div>
+		</div>
+	</div>
+	<div class="gamepad" hidden>
+		<!-- stuff goes here -->
+	</div> 
+	
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	<p>This text is to take up space.</p>
+	
+	<footer>
+		Footer text
+	</footer>
+</body>
+<script src="script.js"></script>
+</html>
