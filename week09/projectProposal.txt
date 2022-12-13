@@ -36,3 +36,84 @@ Schedule:
 
 Things I have learned:
 	CSS is a pain
+		I couldn't find a way to debug my CSS so that it cooperated how I wanted
+		I already knew that I don't want to be a designer though, so no surprises that I struggled with this
+	e.code rather than e.keyCode
+		research the tools/etc available BEFORE you start to apply them
+	Kinda proud of the hidden thing with numpad being hidden until its used unless numlock is on.
+		I'm sure I could make it better in the way that reuses code rather than have duplicates but 
+		but different input types work differently enough that its a pain to get them all to cooperate
+		I'm proud of the fact that users won't see numpad unless they trigger it somehow.
+	think about what features matter. 
+		ditch the download feature because I realized it would be a lot of work that would likely never be used. 
+		It's not what I look for in a tool like this 
+	I can't test with more than one gamepad at a time (because I only own one) but it works with the one I have at least
+	I ran out of time before I could set up joystick recognition.
+
+
+
+
+
+
+1. becoming more efficient at applying your innate curiosity and creativity
+With little guidance student is able to generate project ideas to apply their knowledge and improve their skills.
+Student enjoys asking 'what if?' questions and pursuing their answers.
+
+2. becoming more dexterous at exploring your environment
+Student is adept at finding other resources to fill gaps that they recognize in their knowledge of the subject area.
+Student successfully finds the answers to their 'what if?' questions.
+
+3. becoming a person who enjoys helping and learning from others
+Student is an active participant in the team activities.
+Student watches for opportunities to help their peers, and feels satisfaction when they are able to successfully help someone.
+
+4. using a divide and conquer approach to design solutions for programming problems,
+Student spends adequate time in planning their projects before they start coding.
+Student is adept in taking a complex problem and breaking it down into small trivial steps.
+
+5. finding and trouble shooting bugs you and others will have in the code you write
+Student writes code that is free from syntax and logical errors.
+Student is adept with the developer tools built into each browser. (Breakpoints, stepping through and inspecting code, using the element/css inspector, console, etc...)
+Student is able to successfully set up try/catch blocks in their code to handle potential runtime errors.
+
+6. developing and debugging HTML5, CSS3, and JavaScript programs that use medium complexity web technologies
+Student can successfully build a simple Single page Application (SPA) using HTML, Javascript, and CSS.
+Student applies mobile application design best practices in their applications.
+Student can manipulate the DOM with Javascript
+Student can effectively utilize event listeners with Javascript to handle user events.
+Student is able to pull data from an external source (file or API) with Javascript.
+Student makes some effort at organizing their code using objects, classes, modules, separation of concerns, or an architectural philosophy such as MVC.
+Student makes effective use of CSS transitions/animations in their applications.
+
+
+
+
+
+
+
+applying curiosity and creativity
+	focusing on subjects I'm curious about
+	got to choose last project
+	focused on input devices and different ways of reading inputs
+
+exploring your environment
+	I got better at finding resources 
+	break problem into principles, then find reliable resources about principles, then apply resources
+	more important than memorizing specifics is being able to find specifics quickly
+
+enjoys helping and learning from others
+	I had to go out of my way to be assigned to a group 
+	I saw the difference between doing the assignments by myself and with a group
+	I much prefered working with a group
+
+divide and conquer approach
+	adequate time in planning: 2 weeks of 4.5 weeks before I started writing code 
+	I learned to research tools I will use and not rely on others solutions too much
+	event.keyCode is now depracated, but I didn't find that out till I had a mostly working solution I had to start over on
+
+finding and trouble shooting bugs
+	I have a workflow with chrome as my main browser for research but firefox as my testbench
+	I found several bugs and was able to spend quite a while cleaning up my code until I am relatively proud of it
+
+medium complexity web tech
+	

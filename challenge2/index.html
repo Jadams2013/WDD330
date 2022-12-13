@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="style.css" ></meta>
 </head>
 <body>
+	<a id="top"></a>
 	<div class="sticky">
-		<header class="sticky"><a id="top"></a>
+		<header class="sticky">
 			<h1>Input Tester</h1>
 		</header>
 		<div class="navbar">
@@ -17,21 +18,21 @@
 				<a class="dropbtn">☰</a>
 			    <div class="dropdown-content">
 					<a href="../index.html">Portfolio Home</a>
-					<a>Reset page</a>
-					<div>
-						<input type="checkbox" id="mode" name="mode" value="Dark">
-						<label for="mode"> Swap to Light mode</label>
-					</div>
-					<a>Download JSON</a>
+					<a href="#top" onclick="clearKeys()">Reset page</a>
+					<a onclick="swapMode(this)">Swap to Light Mode</a>
 				</div>
 			</div>
 		</div>
 	</div>
 		<div>
-			<p>Last input: <span id="display"></span></p><hr>
+			<h3>Last input</h3>
+			<p><span id="display">---</span></p>
+			<hr>
 		</div>
-	<div class="keyboard">
-		<div class="mainKeys">
+	<h3>Keyboard</h3>
+	<p id="keyboardNote">Press any key to begin</p>
+	<div id="keyboard" hidden>
+		<div id="mainKeys" hidden>
 			<div class="keyRow">
 				<div data-key="Escape" class="key">Esc</div>
 				<div data-key="F1" class="key override">F1</div>
@@ -119,7 +120,7 @@
 				<div data-key="ControlRight" class="medium key">Ctrl</div> 
 			</div><br>
 		</div>
-		<div class="navKeys">
+		<div id="navKeys" hidden>
 			<div class="keyRow">
 				<!-- <div data-key="0" class="key override">Print</div> can't overide? and doesn't have an event.code?-->
 				<div data-key="ScrollLock" class="key">Scroll Lock</div>
@@ -144,7 +145,7 @@
 				<div data-key="ArrowRight" class="key">→</div>
 			</div>
 		</div><br>
-		<div class="numpad" ><br><br> <!--this is where the numpad will be hidden/shown-->
+		<div id="numpad" hidden><br><br> 
 			<div class="keyRow">
 				<div data-key="NumLock" class="key">Num</div>
 				<div data-key="NumpadDivide" class="key override">/</div>
@@ -176,8 +177,10 @@
 		</div>
 	</div>
 	<hr>
-	<div class="keyboard">
-		<div>
+	<h3>Mouse</h3>
+	<p id="mouseNote">Press any key to begin</p>
+	<div id="mouse" hidden>
+		<div id="mouseSub" hidden>
 			<div class="keyRow">
 				<div data-key="Mouse0" class="key">left Click</div>
 				<div data-key="Mouse2" class="key">Right Click</div>
@@ -195,16 +198,150 @@
 				<div data-key="Mouse3" class="key override">Forward</div>
 				<div data-key="Mouse4" class="key override">Back</div>
 			</div> how to override the back and forward mouse buttons? -->
+			<br>
 		</div>
 	</div>
-
-
-	<div class="gamepad" hidden>
-		<!-- stuff goes here -->
-	</div> 
-	
+	<hr>
+	<h3>Gamepad</h3>
+	<p id="gamepadNote">Press any key to begin</p>
+	<div id="0Gamepad" hidden>
+		<div id="0GamepadSub" class="gamepad" hidden>
+			<div class="leftTriggers">
+				<div data-key="0Gamepad6" class="key">L2 (button 6)</div><br>
+				<div data-key="0Gamepad4" class="key">L1 (button 4)</div>
+			</div>
+			<div class="dpad">
+				<div data-key="0Gamepad12" class="key override">↑ (12)</div> <br>
+				<div data-key="0Gamepad15" class="key">← (15)</div>
+				<div data-key="0Gamepad14" class="key">→ (14)</div> <br>
+				<div data-key="0Gamepad13" class="key override">↓ (13)</div>
+			</div>
+			<div class="joystick">
+				<div data-key="0Gamepad10" class="key">L3 (10)</div>
+			</div>
+			<div class="menuButtons">
+				<div data-key="0Gamepad8" class="key">Select</div>
+				<div data-key="0Gamepad9" class="key">Start</div>
+			</div>
+			<div class="joystick">
+				<div data-key="0Gamepad11" class="key">R3 (11)</div>
+			</div>
+			<div class="buttons">
+				<div data-key="0Gamepad3" class="key override">Y (3)</div> <br>
+				<div data-key="0Gamepad2" class="key">X (2)</div>
+				<div data-key="0Gamepad1" class="key">B (1)</div> <br>
+				<div data-key="0Gamepad0" class="key override">A (0)</div>
+			</div>
+			<div class="rightTriggers">
+				<div data-key="0Gamepad7" class="key">R2 (button 7)</div> <br>
+				<div data-key="0Gamepad5" class="key">R1 (button 5)</div>
+			</div>
+		</div>
+	</div> <br><br>
+	<div id="1Gamepad" hidden>
+		<div id="1GamepadSub" class="gamepad" hidden>
+			<div class="leftTriggers">
+				<div data-key="1Gamepad6" class="key">L2 (button 6)</div><br>
+				<div data-key="1Gamepad4" class="key">L1 (button 4)</div>
+			</div>
+			<div class="dpad">
+				<div data-key="1Gamepad12" class="key override">↑ (12)</div> <br>
+				<div data-key="1Gamepad15" class="key">← (15)</div>
+				<div data-key="1Gamepad14" class="key">→ (14)</div> <br>
+				<div data-key="1Gamepad13" class="key override">↓ (13)</div>
+			</div>
+			<div class="joystick">
+				<div data-key="1Gamepad10" class="key">L3 (10)</div>
+			</div>
+			<div class="menuButtons">
+				<div data-key="1Gamepad8" class="key">Select</div>
+				<div data-key="1Gamepad9" class="key">Start</div>
+			</div>
+			<div class="joystick">
+				<div data-key="1Gamepad11" class="key">R3 (11)</div>
+			</div>
+			<div class="buttons">
+				<div data-key="1Gamepad3" class="key override">Y (3)</div> <br>
+				<div data-key="1Gamepad2" class="key">X (2)</div>
+				<div data-key="1Gamepad1" class="key">B (1)</div> <br>
+				<div data-key="1Gamepad0" class="key override">A (0)</div>
+			</div>
+			<div class="rightTriggers">
+				<div data-key="1Gamepad7" class="key">R2 (button 7)</div> <br>
+				<div data-key="1Gamepad5" class="key">R1 (button 5)</div>
+			</div>
+		</div>
+	</div> <br><br>
+	<div id="2Gamepad" hidden>
+		<div id="2GamepadSub" class="gamepad" hidden>
+			<div class="leftTriggers">
+				<div data-key="2Gamepad6" class="key">L2 (button 6)</div><br>
+				<div data-key="2Gamepad4" class="key">L1 (button 4)</div>
+			</div>
+			<div class="dpad">
+				<div data-key="2Gamepad12" class="key override">↑ (12)</div> <br>
+				<div data-key="2Gamepad15" class="key">← (15)</div>
+				<div data-key="2Gamepad14" class="key">→ (14)</div> <br>
+				<div data-key="2Gamepad13" class="key override">↓ (13)</div>
+			</div>
+			<div class="joystick">
+				<div data-key="2Gamepad10" class="key">L3 (10)</div>
+			</div>
+			<div class="menuButtons">
+				<div data-key="2Gamepad8" class="key">Select</div>
+				<div data-key="2Gamepad9" class="key">Start</div>
+			</div>
+			<div class="joystick">
+				<div data-key="2Gamepad11" class="key">R3 (11)</div>
+			</div>
+			<div class="buttons">
+				<div data-key="2Gamepad3" class="key override">Y (3)</div> <br>
+				<div data-key="2Gamepad2" class="key">X (2)</div>
+				<div data-key="2Gamepad1" class="key">B (1)</div> <br>
+				<div data-key="2Gamepad0" class="key override">A (0)</div>
+			</div>
+			<div class="rightTriggers">
+				<div data-key="2Gamepad7" class="key">R2 (button 7)</div> <br>
+				<div data-key="2Gamepad5" class="key">R1 (button 5)</div>
+			</div>
+		</div>
+	</div> <br><br>
+	<div id="3Gamepad" hidden>
+		<div id="3GamepadSub" class="gamepad" hidden>
+			<div class="leftTriggers">
+				<div data-key="3Gamepad6" class="key">L2 (button 6)</div><br>
+				<div data-key="3Gamepad4" class="key">L1 (button 4)</div>
+			</div>
+			<div class="dpad">
+				<div data-key="3Gamepad12" class="key override">↑ (12)</div> <br>
+				<div data-key="3Gamepad15" class="key">← (15)</div>
+				<div data-key="3Gamepad14" class="key">→ (14)</div> <br>
+				<div data-key="3Gamepad13" class="key override">↓ (13)</div>
+			</div>
+			<div class="joystick">
+				<div data-key="3Gamepad10" class="key">L3 (10)</div>
+			</div>
+			<div class="menuButtons">
+				<div data-key="3Gamepad8" class="key">Select</div>
+				<div data-key="3Gamepad9" class="key">Start</div>
+			</div>
+			<div class="joystick">
+				<div data-key="3Gamepad11" class="key">R3 (11)</div>
+			</div>
+			<div class="buttons">
+				<div data-key="3Gamepad3" class="key override">Y (3)</div> <br>
+				<div data-key="3Gamepad2" class="key">X (2)</div>
+				<div data-key="3Gamepad1" class="key">B (1)</div> <br>
+				<div data-key="3Gamepad0" class="key override">A (0)</div>
+			</div>
+			<div class="rightTriggers">
+				<div data-key="3Gamepad7" class="key">R2 (button 7)</div> <br>
+				<div data-key="3Gamepad5" class="key">R1 (button 5)</div>
+			</div>
+		</div>
+	</div> <br><br>
 	<footer>
-		Footer text
+		Created by James Adams
 	</footer>
 </body>
 <script src="script.js"></script>
